@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.menu-title {
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #ff6b35;
+}
+
+.day-icon {
+    font-size: 3em;
+    margin-right: 25px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.day-content {
+    flex: 1;
+}
+
+.day-title {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.dish-name {
+    background: #ff6b35;
+    color: white;
+    padding: 8px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.price {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.ingredients {
+    color: #cccccc;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-info {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.footer-info > div {
+    margin-bottom: 5px;
+}
+
+.logo-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    line-height: 1.2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 20px;
+    }
+
+    .menu-title {
+        font-size: 2.5em;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .day-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 20px;
+    }
+}

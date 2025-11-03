@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔 Carrito la Bendición - Menú Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Carrito la Bendición" class="logo-image">
+                <h1>Carrito la bendicion</h1>
+            </div>
+            <div class="contact-info" id="contactToggle">
+                <i class="fas fa-phone"></i>
+                <span class="contact-text">¡Llámanos!</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="contact-dropdown" id="contactDropdown">
+                <div class="contact-item">
+                    <a href="https://wa.me/56959733529" target="_blank" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+56 9 5973 3529</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://wa.me/56963905652" target="_blank" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+56 9 6390 5652</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2>¡Deliciosa Comida Rápida!</h2>
+                <p>Precios increíbles, sabor inolvidable</p>
+                <div class="hero-icons">
+                    <i class="fas fa-fire"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Background Section -->
+        <section class="logo-background">
+            <div class="content">
+                <h2>¡Carrito la Bendición!</h2>
+            </div>
+        </section>
+
+        <section class="menu">
+            <div class="container">
+                <h2 class="section-title">Nuestro Menú</h2>
+
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="completos">🥖 Completos</button>
+                    <button class="category-btn" data-category="sandwich">🥪 Sándwich</button>
+                    <button class="category-btn" data-category="chorrillanas">🍟 Chorrillanas</button>
+                    <button class="category-btn" data-category="pichangas">🥘 Pichangas</button>
+                    <button class="category-btn" data-category="extras">🍕 Extras</button>
+                    <button class="category-btn" data-category="helados">🍨 Helados</button>
+                    <button class="category-btn" data-category="bebestibles">🥤 Bebestibles</button>
+                </div>
+
+                <div class="menu-items">
+
+                    <!-- COMPLETOS -->
+                    <!--Completo con Carne mechada-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/Completo Carne Mechada.png" alt="Completo Carne Mechada">
+                        </div>
+                        <div class="item-info">
+                            <h3>Mechado</h3>
+                            <p>Pollo mechado – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                                <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pollo-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/completo pollo.webp" alt="Completo Pollo">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pollo</h3>
+                            <p>Pollo mechado – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                                <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Italiano-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/Completo Italiano.jpg" alt="Completo Italiano">
+                        </div>
+                        <div class="item-info">
+                            <h3>Italiano</h3>
+                            <p>Completo con Vienesa – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                                <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Dinamico-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/Completo Dinámico.webp" alt="Completo Dinamico">
+                        </div>
+                        <div class="item-info">
+                            <h3>Dinamico</h3>
+                            <p>Completo con Vienesa – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                                <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pollo champiñón-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/pollo champiñon.jpg" alt="Pollo champiñón">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pollo champiñón</h3>
+                            <p>Vienesa – champiñón – queso</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Papa Pleto-->
+                    <div class="menu-item" data-category="completos">
+                        <div class="item-image">
+                            <img src="img/Papa pleto.jpg" alt="Papa Pleto">
+                        </div>
+                        <div class="item-info">
+                            <h3>Papa Pleto</h3>
+                            <p>Vienesa – papas fritas – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sándwich-->
+                    <!--Mar y Tierra-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/mar y tierra.jpg" alt="Mar y Tierra">
+                        </div>
+                        <div class="item-info">
+                            <h3>Mar y Tierra</h3>
+                            <p>Queso – churrasco – colas de camarón</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Mechado-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/Sándwich Carne Mechada.jpg" alt="Sándwich Carne Mechada">
+                        </div>
+                        <div class="item-info">
+                            <h3>Mechado</h3>
+                            <p>Carne mechada – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pollo-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/pollo mechado.webp" alt="Sándwich de Pollo">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pollo</h3>
+                            <p>Pollo mechado – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Amburguesa Gigante-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/Amburguesa Gigante.webp" alt="Amburguesa Gigante">
+                        </div>
+                        <div class="item-info">
+                            <h3>Amburguesa Gigante</h3>
+                            <p>Amburguesa – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Churrasco/Queso-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/churrasco queso.jpeg" alt="Churrasco/Queso">
+                        </div>
+                        <div class="item-info">
+                            <h3>Churrasco/Queso</h3>
+                            <p>Churrasco – Queso</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Apanado de pollo-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/Apanado de pollo.jpg" alt="Apanado de pollo">
+                        </div>
+                        <div class="item-info">
+                            <h3>Apanado de pollo</h3>
+                            <p>Apanado – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pulpa de cerdo-->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/Pulpa de cerdo.webp" alt="Pulpa de cerdo">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pulpa de cerdo</h3>
+                            <p>Pulpa – tomate – palta – mayo</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Longaniza ahumada -->
+                    <div class="menu-item" data-category="sandwich">
+                        <div class="item-image">
+                            <img src="img/Longaniza ahumada.jpeg" alt="Longaniza ahumada">
+                        </div>
+                        <div class="item-info">
+                            <h3>Longaniza Ahumada</h3>
+                            <p>Longaniza – tomate – palta – mayo/Choripan</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Chorrillanas-->
+                    <!--Chorrillana Tradicional -->
+                    <div class="menu-item" data-category="chorrillanas">
+                        <div class="item-image">
+                            <img src="img/Chorrillana Tradicional.png" alt="Chorrillana Tradicional">
+                        </div>
+                        <div class="item-info">
+                            <h3>Chorrillana Tradicional</h3>
+                            <p>Base de papas – Cebolla Caramelizada – Mix Carnes</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Chorrillana a lo pobre -->
+                    <div class="menu-item" data-category="chorrillanas">
+                        <div class="item-image">
+                            <img src="img/Chorrillana Bistec a lo Pobre.jpg" alt="Chorrillana a lo pobre">
+                        </div>
+                        <div class="item-info">
+                            <h3>Chorrillana a lo Pobre</h3>
+                            <p>Base de papas – Cebolla – Churrasco – Huevos</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Chorrillana Marina -->
+                    <div class="menu-item" data-category="chorrillanas">
+                        <div class="item-image">
+                            <img src="img/Chorrillana Marina.jpg" alt="Chorrillana Marina">
+                        </div>
+                        <div class="item-info">
+                            <h3>Chorrillana Marina</h3>
+                            <p>Base de papas – Colas de Camaron a la Crema – Cilantro</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pichangas-->
+                    <!--Pichanga tradicional -->
+                    <div class="menu-item" data-category="pichangas">
+                        <div class="item-image">
+                            <img src="img/Pichanga tradicional.jpg" alt="Pichanga tradicional">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pichanga Tradicional</h3>
+                            <p>Base de papas – mix carnes – pickle – huevo – palta</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pichanga Familiar -->
+                    <div class="menu-item" data-category="pichangas">
+                        <div class="item-image">
+                            <img src="img/Pichanga Familiar.jpeg" alt="Pichanga Familiar">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pichanga Familiar</h3>
+                            <p>Base de papas – mix carnes – pickle – huevo – palta (Tamaño familiar)</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Salchipapas -->
+                    <div class="menu-item" data-category="pichangas">
+                        <div class="item-image">
+                            <img src="img/Salchipapas.jpeg" alt="Salchipapas">
+                        </div>
+                        <div class="item-info">
+                            <h3>Salchipapas</h3>
+                            <p>Base de papas – Vianesas</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Papas Mechadas -->
+                    <div class="menu-item" data-category="pichangas">
+                        <div class="item-image">
+                            <img src="img/Papas mechadas.jpg" alt="Papas Mechadas">
+                        </div>
+                        <div class="item-info">
+                            <h3>Papas Mechadas</h3>
+                            <p>Base de papas – carne mechada – Queso</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Extras-->
+                    <!--Pizzas -->
+                    <div class="menu-item" data-category="extras">
+                        <div class="item-image">
+                            <img src="img/Pizzas.jpg" alt="Pizzas">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pizzas</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Empanadas de Queso-->
+                    <div class="menu-item" data-category="extras">
+                        <div class="item-image">
+                            <img src="img/empanadas de queso.jpg" alt="Empanadas de Queso">
+                        </div>
+                        <div class="item-info">
+                            <h3>Empanadas de Queso</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Selladitas-->
+                    <div class="menu-item" data-category="extras">
+                        <div class="item-image">
+                            <img src="img/selladitas.jpg" alt="Selladitas">
+                        </div>
+                        <div class="item-info">
+                            <h3>Selladitas</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Calzones Rotos-->
+                    <div class="menu-item" data-category="extras">
+                        <div class="item-image">
+                            <img src="img/calzones rotos.webp" alt="Calzones Rotos">
+                        </div>
+                        <div class="item-info">
+                            <h3>Calzones Rotos</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Bowl-->
+                    <div class="menu-item" data-category="extras">
+                        <div class="item-image">
+                            <img src="img/BOWL.jpeg" alt="Bowl">
+                        </div>
+                        <div class="item-info">
+                            <h3>Bowl</h3>
+                            <p>Base de Arroz - Base de Papas Fritas - Base de Fideos</p>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                   <!--Bebestibles-->
+
+                    <!--Jugos naturales-->
+                    <div class="menu-item" data-category="bebestibles">
+                        <div class="item-image">
+                            <img src="img/Jugos naturales.jpg" alt="Jugos naturales">
+                        </div>
+                        <div class="item-info">
+                            <h3>Jugos naturales</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Leche con Platano-->
+                    <div class="menu-item" data-category="bebestibles">
+                        <div class="item-image">
+                            <img src="img/Leche con platano.jpg" alt="Leche con Platano">
+                        </div>
+                        <div class="item-info">
+                            <h3>Leche con Platano</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Milkshake de frutilla-->
+                    <div class="menu-item" data-category="bebestibles">
+                        <div class="item-image">
+                            <img src="img/milkshake de frutilla.jpg" alt="Milkshake de frutilla">
+                        </div>
+                        <div class="item-info">
+                            <h3>Milkshake de frutilla</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Helados-->
+
+                    <!--Helado Soft-->
+                    <div class="menu-item" data-category="helados">
+                        <div class="item-image">
+                            <img src="img/Helado soft.jpg" alt="Helado soft">
+                        </div>
+                        <div class="item-info">
+                            <h3>Helado soft</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Helados Artesanales-->
+                    <div class="menu-item" data-category="helados">
+                        <div class="item-image">
+                            <img src="img/Helado artesanal.webp" alt="Helado artesanal">
+                        </div>
+                        <div class="item-info">
+                            <h3>Helados Artesanales</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Helados de Agua-->
+                    <div class="menu-item" data-category="helados">
+                        <div class="item-image">
+                            <img src="img/Helados de Agua.jpg" alt="Helado de agua">
+                        </div>
+                        <div class="item-info">
+                            <h3>Helados de Agua</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Helados de Leche-->
+                    <div class="menu-item" data-category="helados">
+                        <div class="item-image">
+                            <img src="img/Helado de Leche.jpg" alt="Helado de leche">
+                        </div>
+                        <div class="item-info">
+                            <h3>Helados de Leche</h3>
+                            <div class="item-footer">
+                             <span class="availability">✓ Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

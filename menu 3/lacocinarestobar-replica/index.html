@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del Local - Restaurant & Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Nombre del Local</h1>
+                    <span>RestoBar</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+                        <li><a href="#menu" class="nav-link">Menú</a></li>
+                        <li><a href="#galeria" class="nav-link">Galería</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                        <li><a href="#reservas" class="nav-link btn-reserva">Reservas</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Bienvenidos a Nombre del Local</h1>
+                <p class="hero-subtitle">Disfruta de una experiencia gastronómica única con los mejores sabores tradicionales y modernos</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                    <a href="#reservas" class="btn btn-secondary">Hacer Reserva</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Restaurante La Cocina" />
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="about" id="sobre-nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>En La Cocina RestoBar nos apasiona crear experiencias culinarias inolvidables. Nuestro compromiso es ofrecer platos de alta calidad elaborados con ingredientes frescos y técnicas tradicionales combinadas con toques modernos.</p>
+                    <p>Desde nuestra apertura, hemos sido el punto de encuentro preferido para familias, parejas y grupos de amigos que buscan disfrutar de buena comida en un ambiente acogedor y elegante.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Cocina de Calidad</h3>
+                            <p>Ingredientes frescos y técnicas expertas</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Servicio Rápido</h3>
+                            <p>Atención personalizada y eficiente</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h3>Ambiente Acogedor</h3>
+                            <p>Espacio perfecto para cualquier ocasión</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nuestro restaurante" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="todos">Todos</button>
+                <button class="category-btn" data-category="entradas">Entradas</button>
+                <button class="category-btn" data-category="platos-principales">Platos Principales</button>
+                <button class="category-btn" data-category="postres">Postres</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div class="menu-items">
+                <!-- Entradas -->
+                <div class="menu-item" data-category="entradas">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ensalada César" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Ensalada César</h3>
+                        <p>Lechuga fresca, pollo grillé, crutones, queso parmesano y aderezo César</p>
+                        <span class="price">$8.900</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="entradas">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Sopa del día" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Sopa del Día</h3>
+                        <p>Sopa casera preparada con ingredientes frescos de temporada</p>
+                        <span class="price">$6.500</span>
+                    </div>
+                </div>
+                <!-- Platos Principales -->
+                <div class="menu-item" data-category="platos-principales">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Salmón Grillado" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Salmón Grillado</h3>
+                        <p>Salmón fresco grillado con vegetales salteados y salsa de hierbas</p>
+                        <span class="price">$16.900</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="platos-principales">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Lomo Saltado" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Lomo Saltado</h3>
+                        <p>Carne de res salteada con cebolla, tomate, papas y arroz</p>
+                        <span class="price">$14.500</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="platos-principales">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Pasta Alfredo" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Pasta Alfredo</h3>
+                        <p>Pasta fresca con salsa cremosa de queso parmesano y pollo</p>
+                        <span class="price">$12.900</span>
+                    </div>
+                </div>
+                <!-- Postres -->
+                <div class="menu-item" data-category="postres">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Tiramisú" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Tiramisú</h3>
+                        <p>Postre italiano clásico con capas de bizcocho, café y mascarpone</p>
+                        <span class="price">$7.500</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="postres">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cheesecake" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Cheesecake de Frutos Rojos</h3>
+                        <p>Queso crema sobre base de galletas con salsa de frutos rojos</p>
+                        <span class="price">$8.900</span>
+                    </div>
+                </div>
+                <!-- Bebidas -->
+                <div class="menu-item" data-category="bebidas">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Vino Tinto" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Vino Tinto Reserva</h3>
+                        <p>Vino tinto de la casa, perfecto acompañante para carnes</p>
+                        <span class="price">$9.500</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bebidas">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cóctel" />
+                    </div>
+                    <div class="item-content">
+                        <h3>Pisco Sour</h3>
+                        <p>Nuestro cóctel estrella preparado con pisco premium</p>
+                        <span class="price">$6.900</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <h2>Nuestra Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Interior del restaurante" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Nuestra cocina" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Plato destacado" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ambiente acogedor" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Postres deliciosos" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Nuestros postres" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información de Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p><br></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+569</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@correo del local.cl</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>Lunes - Jueves: 12:00 - 23:00<br>Viernes - Sábado: 12:00 - 01:00<br>Domingo: 12:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservas -->
+    <section class="reservas" id="reservas">
+        <div class="container">
+            <h2>Hacer una Reserva</h2>
+            <div class="reservas-content">
+                <div class="reservas-info">
+                    <h3>Reserva tu mesa</h3>
+                    <p>Garantiza tu lugar en nuestro restaurante. Aceptamos reservas para grupos pequeños y grandes.</p>
+                    <div class="reservas-features">
+                        <div class="reserva-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Hasta 20 personas</span>
+                        </div>
+                        <div class="reserva-feature">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>Eventos especiales</span>
+                        </div>
+                        <div class="reserva-feature">
+                            <i class="fas fa-parking"></i>
+                            <span>Estacionamiento disponible</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservas-form">
+                    <form id="reservas-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="reserva-nombre" name="nombre" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="reserva-telefono" name="telefono" placeholder="Teléfono" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="reserva-email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="reserva-personas" name="personas" placeholder="Número de personas" min="1" max="20" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" id="reserva-fecha" name="fecha" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" id="reserva-hora" name="hora" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="reserva-notas" name="notas" placeholder="Notas especiales (opcional)" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Reservar Ahora</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Nombre del Local</h3>
+                        <span>RestoBar</span>
+                    </div>
+                    <p>Disfruta de una experiencia gastronómica única con nosotros. Calidad, sabor y excelente servicio.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <div class="horarios">
+                        <p><strong>Lunes - Jueves:</strong> 12:00 - 23:00</p>
+                        <p><strong>Viernes - Sábado:</strong> 12:00 - 01:00</p>
+                        <p><strong>Domingo:</strong> 12:00 - 22:00</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contacto-footer">
+                        <p><i class="fas fa-phone"></i> +569</p>
+                        <p><i class="fas fa-envelope"></i> info@correo-del-local.cl</p>
+                        <p><i class="fas fa-map-marker-alt"></i> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nombre del Local. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

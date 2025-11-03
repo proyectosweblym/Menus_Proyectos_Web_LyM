@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Alex Barber - Estilo y Elegancia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        // ============================================
+        // CONFIGURACIÓN DE FIREBASE - PROYECTO BARBERIA CHAMO
+        // ============================================
+        // Proyecto Firebase configurado para sincronización en tiempo real
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_tuKJ8xLpVZ9Q7rN8k2X1yR5M3PqW9Z4",           // API Key real
+            authDomain: "barberia-chamo.firebaseapp.com",                // Dominio Firebase
+            projectId: "barberia-chamo",                                 // Project ID
+            storageBucket: "barberia-chamo.appspot.com",                 // Storage Bucket
+            messagingSenderId: "987654321098",                           // Sender ID
+            appId: "1:987654321098:web:1a2b3c4d5e6f7890"                // App ID
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Make Firebase available globally
+        window.firebase = { initializeApp, getFirestore };
+        window.db = db;
+
+        console.log('🔥 Firebase inicializado correctamente');
+    </script>
+</head>
+<body>
+    <!-- Encabezado Principal -->
+    <header class="hero-section">
+        <!-- Logo a todo el ancho -->
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Alex Barber - Logo" class="hero-logo">
+        </div>
+    </header>
+
+    <!-- Sección Fecha y Dirección -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-content">
+                <div class="current-date">
+                    <h2 class="date-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        Fecha Actual
+                    </h2>
+                    <p id="fecha" class="date-text">-</p>
+                </div>
+                <div class="address-info">
+                    <h2 class="address-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Dirección
+                    </h2>
+                    <p class="address-text">Vega Monumental Pasillo 8 Local 190</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Síguenos -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-content">
+                <h2 class="social-title">
+                    <i class="fab fa-instagram"></i>
+                    Síguenos
+                </h2>
+
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/ale.barber.conce?igsh=cXR3emU0OWZzeWhn" target="_blank" class="btn btn-social">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Visítanos -->
+    <section class="visit-section">
+        <div class="container">
+            <div class="visit-content">
+                <h2 class="visit-title">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Visítanos
+                </h2>
+                <div class="visit-info">
+                    <p class="visit-address">
+                        <i class="fas fa-location-dot"></i>
+                        <strong>Ubicación:</strong> Vega Monumental Pasillo 8 Local 190
+                    </p>
+                    <p class="visit-description">
+                        Te esperamos en nuestro local para brindarte la mejor experiencia en barbería.
+                        ¡Ven y descubre nuestro trabajo!
+                    </p>
+                </div>
+                <div class="visit-buttons">
+                    <a href="https://maps.google.com/?q=Vega+Monumental+Pasillo+8+Local+190" target="_blank" class="btn btn-visit">
+                        <i class="fas fa-directions"></i>
+                        Cómo llegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestro Trabajo -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Trabajo</h2>
+            <div class="portfolio-grid">
+                <!-- Imágenes del trabajo -->
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 1  .jpg" alt="Trabajo 1" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 2.jpg" alt="Trabajo 2" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 3.jpg" alt="Trabajo 3" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 4.jpg" alt="Trabajo 4" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 5.jpg" alt="Trabajo 5" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 6.jpg" alt="Trabajo 6" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 7.jpg" alt="Trabajo 7" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 8.jpg" alt="Trabajo 8" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 9.jpeg" alt="Trabajo 9" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 10.jpeg" alt="Trabajo 10" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 11.jpeg" alt="Trabajo 11" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 12.jpeg" alt="Trabajo 12" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 13.jpeg" alt="Trabajo 13" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 14.jpeg" alt="Trabajo 14" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal(this)" data-type="image">
+                    <img src="img/foto 15.jpg" alt="Trabajo 15" loading="lazy" decoding="async">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para ver más trabajos -->
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="btn btn-load-more">
+                    <i class="fas fa-plus"></i>
+                    Ver más trabajos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes ampliadas -->
+    <div id="mediaModal" class="modal">
+        <div class="modal-content-container">
+            <div class="modal-image-wrapper">
+                <img class="modal-content modal-image" id="modalImage">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de reservas -->
+    <div class="floating-reserve-btn" onclick="openBookingModal()">
+        <i class="fas fa-calendar-plus"></i>
+        <span>Reservar</span>
+    </div>
+
+    <!-- Botón flotante de Admin (Ícono de Usuario) -->
+    <div class="floating-admin-btn" onclick="openAdminModal()">
+        <i class="fas fa-user-circle"></i>
+    </div>
+
+    <!-- Modal de reservas -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-content">
+            <div class="booking-container">
+                <div class="booking-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Reservar Cita
+                </div>
+
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName">
+                                <i class="fas fa-user"></i>
+                                Nombre Completo
+                            </label>
+                            <input type="text" id="customerName" name="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">
+                                <i class="fas fa-phone"></i>
+                                Teléfono
+                            </label>
+                            <input type="tel" id="customerPhone" name="customerPhone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType">
+                                <i class="fas fa-cut"></i>
+                                Tipo de Servicio
+                            </label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">Seleccionar servicio</option>
+                                <option value="corte_clasico">Corte clásico - $9.000</option>
+                                <option value="corte_moderno">Corte moderno - $10.000</option>
+                                <option value="barba">Barba - $5.000</option>
+                                <option value="cejas">Cejas - $2.000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentDate">
+                                <i class="fas fa-calendar-day"></i>
+                                Fecha Preferida
+                            </label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime">
+                            <i class="fas fa-clock"></i>
+                            Hora Preferida
+                        </label>
+                        <select id="appointmentTime" name="appointmentTime" required>
+                            <option value="">Seleccionar hora</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">
+                            <i class="fas fa-comment"></i>
+                            Notas Especiales (opcional)
+                        </label>
+                        <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Describe cualquier estilo específico, alergias, o preferencias especiales..."></textarea>
+                    </div>
+
+                    <!-- Resumen de la reserva -->
+                    <div class="booking-summary" id="bookingSummary" style="display: none;">
+                        <div class="summary-item">
+                            <span class="summary-label">Servicio:</span>
+                            <span class="summary-value" id="summaryService">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Fecha y Hora:</span>
+                            <span class="summary-value" id="summaryDateTime">-</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">Cancelar</button>
+                        <button type="submit" class="btn btn-confirm">Confirmar Reserva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Administración -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-content">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <div class="admin-title">
+                        <i class="fas fa-cog"></i>
+                        Panel de Administración
+                    </div>
+                    <button class="admin-close-btn" onclick="closeAdminModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="admin-body">
+                    <!-- Formulario de Login -->
+                    <div id="adminLoginForm" class="admin-section">
+                        <h3>Iniciar Sesión</h3>
+                        <div class="form-group">
+                            <label for="adminPassword">Contraseña:</label>
+                            <input type="password" id="adminPassword" placeholder="Ingrese la contraseña de administrador">
+                        </div>
+                        <button class="btn btn-primary admin-login-btn" onclick="adminLogin()">Entrar</button>
+                    </div>
+
+                    <!-- Panel de Administración (oculto inicialmente) -->
+                    <div id="adminPanel" class="admin-section" style="display: none;">
+                        <div class="admin-nav">
+                            <button class="admin-nav-btn active" onclick="showAdminSection('bookings')">Reservas</button>
+                            <button class="admin-nav-btn" onclick="showAdminSection('blocked-days')">Días Bloqueados</button>
+                            <button class="admin-nav-btn" onclick="showAdminSection('settings')">Configuración</button>
+                        </div>
+
+                        <!-- Gestión de Reservas -->
+                        <div id="adminBookingsSection" class="admin-content-section">
+                            <div class="admin-section-header">
+                                <h3>Gestión de Reservas</h3>
+                                <button class="btn btn-secondary" onclick="refreshBookingsList()">
+                                    <i class="fas fa-sync-alt"></i>
+                                    Actualizar
+                                </button>
+                            </div>
+
+                            <div id="bookingsList" class="bookings-list">
+                                <!-- Las reservas se cargarán aquí dinámicamente -->
+                            </div>
+
+                            <div class="admin-actions">
+                                <button class="btn btn-primary" onclick="exportBookings()">
+                                    <i class="fas fa-download"></i>
+                                    Exportar Reservas
+                                </button>
+                                <button class="btn btn-secondary" onclick="clearAllBookings()">
+                                    <i class="fas fa-trash"></i>
+                                    Limpiar Todo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Días Bloqueados -->
+                        <div id="adminBlockedDaysSection" class="admin-content-section" style="display: none;">
+                            <div class="admin-section-header">
+                                <h3>Días Bloqueados</h3>
+                                <button class="btn btn-secondary" onclick="refreshBlockedDaysList()">
+                                    <i class="fas fa-sync-alt"></i>
+                                    Actualizar
+                                </button>
+                            </div>
+
+                            <div class="blocked-days-management">
+                                <div class="add-blocked-day-form">
+                                    <h4>Bloquear Nuevo Día</h4>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="blockedDate">Seleccionar Fecha:</label>
+                                            <input type="date" id="blockedDate" min="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="blockedReason">Motivo (opcional):</label>
+                                            <input type="text" id="blockedReason" placeholder="Ej: Vacaciones, Mantenimiento, etc.">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addBlockedDay()">
+                                        <i class="fas fa-ban"></i>
+                                        Bloquear Día
+                                    </button>
+                                </div>
+
+                                <div class="blocked-days-list">
+                                    <h4>Días Bloqueados Actualmente</h4>
+                                    <div id="blockedDaysList" class="blocked-days-container">
+                                        <!-- Los días bloqueados se cargarán aquí dinámicamente -->
+                                    </div>
+                                </div>
+
+                                <div class="blocked-days-actions">
+                                    <button class="btn btn-secondary" onclick="clearAllBlockedDays()">
+                                        <i class="fas fa-trash"></i>
+                                        Desbloquear Todos
+                                    </button>
+                                    <button class="btn btn-primary" onclick="exportBlockedDays()">
+                                        <i class="fas fa-download"></i>
+                                        Exportar Lista
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Configuración -->
+                        <div id="adminSettingsSection" class="admin-content-section" style="display: none;">
+                            <h3>Configuración del Sistema</h3>
+
+                            <div class="settings-group">
+                                <h4>Horarios de Atención</h4>
+                                <div class="form-group">
+                                    <label for="openingTime">Hora de Apertura:</label>
+                                    <select id="openingTime">
+                                        <option value="09:00">09:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="10:00">10:00</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="closingTime">Hora de Cierre:</label>
+                                    <select id="closingTime">
+                                        <option value="19:00">19:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="20:00">20:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <h4>Configuración de WhatsApp</h4>
+                                <div class="form-group">
+                                    <label for="whatsappNumber">Número de WhatsApp:</label>
+                                    <input type="tel" id="whatsappNumber" value="56999431896">
+                                </div>
+                            </div>
+
+                            <div class="admin-actions">
+                                <button class="btn btn-primary" onclick="saveSettings()">Guardar Configuración</button>
+                                <button class="btn btn-secondary" onclick="loadSettings()">Cargar Configuración</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección adicional antes del footer -->
+    <section class="final-section" style="padding: 60px 0; background: linear-gradient(135deg, var(--secondary-color), var(--accent-color)); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 20px;">¡Gracias por visitarnos!</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Esperamos verte pronto en Alex Barber. Tu estilo, nuestra pasión.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Footer personalizado -->
+    <footer class="site-footer">
+        <div class="footer-inner container">
+            <div class="footer-left">
+                <span class="footer-text">Desarrollado por <a href="#" target="_blank" class="footer-link">Proyectos Web L y M</a></span>
+            </div>
+
+            <div class="footer-right">
+                <a href="#" class="lang-link">Español (Latinoamérica)</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
